@@ -1,20 +1,20 @@
 // BASE
-let pensel = 15.678;
+let pencil = 15.678;
 let book = 123.965;
 let notebook = 90.2345;
 
-let maxNumber = Math.max(pensel, book, notebook);
+let maxNumber = Math.max(pencil, book, notebook);
 console.log('Максимальне число: ' + maxNumber);
-let minNumber = Math.min(pensel, book, notebook);
+let minNumber = Math.min(pencil, book, notebook);
 console.log('Мінімальне число: ' +minNumber );
 
-let sumPrice = pensel + book + notebook;
+let sumPrice = pencil + book + notebook;
 console.log('Вартість всіх товарів: ' + sumPrice +' грн');
 
-let penselInt = Math.floor(pensel);
+let pencilInt = Math.floor(pencil);
 let bookInt = Math.floor(book);
 let notebookInt = Math.floor(notebook);
-let sumPriceInt = penselInt + bookInt + notebookInt;
+let sumPriceInt = pencilInt + bookInt + notebookInt;
 let oddSumPrice =  Math.ceil(sumPriceInt/100) * 100;
 console.log('Округлена сума товарів: ' + oddSumPrice);
 
