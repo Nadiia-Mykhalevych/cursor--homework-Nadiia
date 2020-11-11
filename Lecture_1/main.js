@@ -1,52 +1,51 @@
 // BASE
-let pencil = 15.678;
-let book = 123.965;
-let notebook = 90.2345;
+const pencilPrice = 15.678;
+const bookPrice = 123.965;
+const notebookPrice = 90.2345;
 
-let maxNumber = Math.max(pencil, book, notebook);
+const maxNumber = Math.max(pencilPrice, bookPrice, notebookPrice);
 console.log('Максимальне число: ' + maxNumber);
-let minNumber = Math.min(pencil, book, notebook);
-console.log('Мінімальне число: ' +minNumber );
+const minNumber = Math.min(pencilPrice, bookPrice, notebookPrice);
+console.log('Мінімальне число: ' + minNumber );
 
-let sumPrice = pencil + book + notebook;
-console.log('Вартість всіх товарів: ' + sumPrice +' грн');
+const sumPrice = pencilPrice + bookPrice + notebookPrice;
+console.log('Вартість всіх товарів: ' + sumPrice + ' грн');
 
-let pencilInt = Math.floor(pencil);
-let bookInt = Math.floor(book);
-let notebookInt = Math.floor(notebook);
-let sumPriceInt = pencilInt + bookInt + notebookInt;
-let oddSumPrice =  Math.ceil(sumPriceInt/100) * 100;
-console.log('Округлена сума товарів: ' + oddSumPrice);
+const roundedTotalSum =  Math.floor(pencilPrice) + Math.floor(bookPrice) + Math.floor(notebookPrice);
+const roundedSumPrice =  Math.round(roundedTotalSum/100) * 100;
+console.log('Округлена сума товарів: ' + roundedSumPrice);
 
-let odd = sumPriceInt % 2;
-console.log('Чи є сума всіх товарів парним числом: '+!!odd);
+const isEven = roundedTotalSum % 2 === 0;
+console.log('Чи є сума всіх товарів парним числом: ' + isEven);
 
-let restOf500 = (500-sumPrice).toFixed(2);
-console.log('Решта з 500 грн: ' + restOf500 +' грн');
+const userCash = 500;
+const restOfUserCash = +(userCash-sumPrice).toFixed(2);
+console.log('Решта з 500 грн: ' + restOfUserCash + ' грн');
 
-let averange = (sumPrice/3).toFixed(2);
-console.log('Середнє значення цін: '+ averange +' грн');
+const average = +(sumPrice / 3).toFixed(2);
+console.log('Середнє значення цін: ' + average + ' грн');
 
-let discount = Math.random();
-let sumWithDiscount = Math.floor(100*discount);
-console.log('Знижка:'+ sumWithDiscount +'%');
+const maxDiscount = 100;
+const minDiscount = 0;
+const percentageCalcNumber = 100;
+const discount = Math.floor(Math.random() * (maxDiscount - minDiscount + 1)) + minDiscount;
+console.log('Знижка:' + discount + '%');
 
-let sumToPay = ((1-discount)*sumPrice ).toFixed(2);
-console.log('Сума до оплати: '+ sumToPay +' грн');
+const sumToPay = +((percentageCalcNumber - discount) * sumPrice/percentageCalcNumber).toFixed(2);
+console.log('Сума до оплати: ' + sumToPay + ' грн');
 
-let profit = ((sumPrice/2)-discount*sumPrice).toFixed(2);
-console.log('Чистий прибуток: ' + profit +' грн');
+const profit = +((sumPrice/2) - sumToPay * discount/percentageCalcNumber).toFixed(2);
+console.log('Чистий прибуток: ' + profit + ' грн');
 
 
-//ADVANSED
+//ADVANCED
 console.log(`Максимальне число: ${maxNumber}
 Мінімальне число: ${minNumber}
 Вартість всіх товарів: ${sumPrice} грн
-Округлена сума товарів: ${oddSumPrice} грн
-Чи є сума всіх товарів парним числом: ${!!odd}
-Решта з 500 грн: ${restOf500} грн
-Середнє значення цін: ${averange} 
-Знижка: ${sumWithDiscount} %
+Округлена сума товарів: ${roundedSumPrice} грн
+Чи є сума всіх товарів парним числом: ${isEven}
+Решта з 500 грн: ${restOfUserCash} грн
+Середнє значення цін: ${average} 
+Знижка: ${discount} %
 Сума до оплати: ${sumToPay} грн
-Чистий прибуток: ${profit} грн
-`)
+Чистий прибуток: ${profit} грн`);
