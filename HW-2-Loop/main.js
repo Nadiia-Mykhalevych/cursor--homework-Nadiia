@@ -7,6 +7,9 @@ let lastNumber = +prompt('Введіть друге число:');
 while (!Number.isInteger(lastNumber)) {
     lastNumber = +prompt('Введіть ціле друге число:');
 }
+while (lastNumber < firstNumber) {
+    lastNumber = +prompt('Друге число не може бути меншим за перше:');
+}
 
 const skipEven = confirm ('Потрібно пропускати парні числа?');
 
