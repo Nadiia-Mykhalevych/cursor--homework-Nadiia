@@ -39,7 +39,7 @@ function countLetter(letter, word) {
 function deleteLetters(letter, sentence) {
     let  sentenceWithoutLetters = '';
     for (let i = 0; i < sentence.length; i++) {
-        if (sentence[i] !== letter.toUpperCase() && sentence[i] !== letter.toLowerCase()) {
+        if (sentence[i].toUpperCase() !== letter.toUpperCase()) {
             sentenceWithoutLetters = sentenceWithoutLetters + sentence[i];
         }
     }
