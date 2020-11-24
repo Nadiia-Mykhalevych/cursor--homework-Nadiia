@@ -29,7 +29,7 @@ function getRandomNumber(minNumber, maxNumber) {
 function countLetter(letter, word) {
     let count = 0;
     for (let i = 0; i < word.length; i++) {
-        if (word[i] === letter.toUpperCase() || word[i] === letter.toLowerCase()) {
+        if(word[i].toUpperCase() === letter.toUpperCase()) {
             count += 1;
         }
     }
