@@ -8,18 +8,17 @@ function getPairedStudents() {
 console.log(getPairedStudents());
 
 function assignThemes() {
-    let i = 0;
-    let studentsWithThemes = [];
-    for (let student of getPairedStudents()) {
-        studentsWithThemes.push([student.join(" і "), themes[i]]);
-        i++;
+    const studentsWithThemes = [];
+    const pairedStudents = getPairedStudents();
+    for (let i = 0; i < pairedStudents.length; i++) {
+        studentsWithThemes.push(pairedStudents[i].join(" і "), themes[i])
     }
     return studentsWithThemes;
 }
 console.log(assignThemes());
 
 function studentsMarks() {
-    let studentsWithMarks = [];
+    const studentsWithMarks = [];
     for (let i = 0; i < students.length; i++) {
         studentsWithMarks.push([students[i], marks[i]])
     }
@@ -28,7 +27,7 @@ function studentsMarks() {
 console.log(studentsMarks());
 
 function studentsThemesMarks() {
-    let studentsWithThemesMark = [];
+    const studentsWithThemesMark = [];
     for (let student of assignThemes()) {
         student.push(marks[getRandomPositionInArray()]);
         studentsWithThemesMark.push(student);
