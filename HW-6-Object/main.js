@@ -33,13 +33,13 @@ function getSubjects(student) {
     }
     return correctSubjects;
 }
-// console.log(getSubjects(students[0]));
+console.log(getSubjects(students[0]));
 
 function getAverageMark(student) {
     const marks = Object.values(student.subjects).flat(1);
     return +(marks.reduce((a, b) => a + b) / marks.length).toFixed(2);
 }
-// console.log(getAverageMark(students[0]));
+console.log(getAverageMark(students[0]));
 
 function getStudentInfo(student) {
     return {
@@ -48,7 +48,7 @@ function getStudentInfo(student) {
         averageMark: getAverageMark(student)
     }
 }
-// console.log(getStudentInfo(students[0]));
+console.log(getStudentInfo(students[0]));
 
 function getStudentsNames(students) {
     let studentsNames = [];
@@ -57,7 +57,7 @@ function getStudentsNames(students) {
     }
     return studentsNames.sort();
 }
-// console.log(getStudentsNames(students));
+console.log(getStudentsNames(students));
 
 function getBestStudent(students) {
     let result;
@@ -70,16 +70,16 @@ function getBestStudent(students) {
     }
     return result;
 }
-// console.log(getBestStudent(students));
+console.log(getBestStudent(students));
 
 function calculateWordLetters(word) {
     let result = {};
     let uniqueLetters = word.split("").filter(((value, index, array) => array.indexOf(value) === index));
     for (let i = 0; i < uniqueLetters.length; i++) {
-        Object.assign(result, {
-            `${uniqueLetters[i]}`: countLetter(uniqueLetters[i], word)
-        })
+        let param = uniqueLetters[i];
+        result[param] = countLetter(uniqueLetters[i], word);
     }
+    return result;
 }
 console.log(calculateWordLetters("тест"));
 
