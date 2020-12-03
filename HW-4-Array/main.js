@@ -11,7 +11,7 @@ function assignThemes() {
     const studentsWithThemes = [];
     const pairedStudents = getPairedStudents();
     for (let i = 0; i < pairedStudents.length; i++) {
-        studentsWithThemes.push(pairedStudents[i].join(" і "), themes[i])
+        studentsWithThemes.push([pairedStudents[i].join(" і "), themes[i]])
     }
     return studentsWithThemes;
 }
