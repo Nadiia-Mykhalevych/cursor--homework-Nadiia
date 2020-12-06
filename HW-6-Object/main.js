@@ -25,13 +25,8 @@ const students = [{
 }];
 
 function getSubjects(student) {
-    const subjects = Object.keys(student.subjects);
-    let correctSubjects = [];
-    for (let i = 0; i < subjects.length; i++) {
-        let item = subjects[i].charAt(0).toUpperCase() + subjects[i].slice(1);
-        correctSubjects.push(item.replace(/_/gi, " "));
-    }
-    return correctSubjects;
+    return Object.keys(student.subjects).map((subjName) =>
+        subjName[0].toUpperCase() + subjName.slice(1).toLowerCase().replace(/_/gi, " "));
 }
 console.log(getSubjects(students[0]));
 
@@ -51,24 +46,13 @@ function getStudentInfo(student) {
 console.log(getStudentInfo(students[0]));
 
 function getStudentsNames(students) {
-    let studentsNames = [];
-    for (let i = 0; i < students.length; i++) {
-        studentsNames.push(students[i].name);
-    }
-    return studentsNames.sort();
+    return students.map(student => student.name).sort();
 }
 console.log(getStudentsNames(students));
 
 function getBestStudent(students) {
-    let result;
-    for (let i = 0; i < students.length - 1; i++) {
-        if (getAverageMark(students[i]) > students[i + 1]) {
-            result = students[i].name;
-        } else {
-            result = students[i + 1].name;
-        }
-    }
-    return result;
+    return students.sort((a, b) => getAverageMark(a) - getAverageMark(b))
+        .map(student => student.name)[students.length - 1];
 }
 console.log(getBestStudent(students));
 
