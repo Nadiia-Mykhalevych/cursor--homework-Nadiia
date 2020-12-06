@@ -20,13 +20,12 @@ console.log(getTotalTaxes.call(lithuania));
 function getMySalary(country) {
     const salary = Math.round(getRandomNumber(1500, 2000));
     const taxes = Math.round(getMyTaxes.call(country, salary));
-    console.log({
+    return {
         salary: salary,
         taxes: taxes,
         profit: salary - taxes,
-    });
+    };
 }
-setTimeout(getMySalary, 2000);
 console.log(getMySalary(ukraine));
 
 function getRandomNumber(minNumber, maxNumber) {
