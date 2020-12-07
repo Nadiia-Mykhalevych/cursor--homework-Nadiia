@@ -27,7 +27,10 @@ function getMySalary(country) {
     };
 }
 console.log(getMySalary(ukraine));
-
+console.log(getMySalary(ukraine));
+setInterval(function() {
+    console.log(getMySalary(ukraine))
+}, 10000);
 function getRandomNumber(minNumber, maxNumber) {
     return Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber;
 }
