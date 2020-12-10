@@ -1,6 +1,6 @@
 class Student {
     marks;
-    #isDismiss;
+    #isDismiss = false;
     constructor(university, course, fullName) {
         this.university = university;
         this.course = course;
@@ -32,6 +32,9 @@ class Student {
     recovery() {
         this.#isDismiss = false;
     }
+    get getIsDismissed() {
+        return this.#isDismiss;
+    }
 }
 
 const pivovarov = new Student("ПНУ ім. Стефаника", 2, "Artem Pivovarov");
@@ -48,11 +51,13 @@ const scholarshipAmount = 1400;
 class BudgetStudent extends Student {
     constructor (university, course, fullName) {
         super(university, course, fullName);
-        setInterval(this.getScholarship, 3000);
+        setInterval(() => {
+            this.getScholarship();
+        }, 30000);
     }
 
     getScholarship() {
-        if (this.getAverage >= 4) {
+        if (this.getAverage() >= 4 && !this.getIsDismissed) {
             return console.log(`Ви отримали ${scholarshipAmount} грн. стипендії.`);
         }
     }
