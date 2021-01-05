@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/cursor--homework-Nadiia/HW-15-React.%20Intro/post-app/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/cursor--homework-Nadiia/HW-15-React.%20Intro/post-app/static/js/main.bcd9ae4d.chunk.js",
+    "main.js.map": "/cursor--homework-Nadiia/HW-15-React.%20Intro/post-app/static/js/main.bcd9ae4d.chunk.js.map",
+    "runtime-main.js": "/cursor--homework-Nadiia/HW-15-React.%20Intro/post-app/static/js/runtime-main.db29e261.js",
+    "runtime-main.js.map": "/cursor--homework-Nadiia/HW-15-React.%20Intro/post-app/static/js/runtime-main.db29e261.js.map",
+    "static/js/2.5ccfdce9.chunk.js": "/cursor--homework-Nadiia/HW-15-React.%20Intro/post-app/static/js/2.5ccfdce9.chunk.js",
+    "static/js/2.5ccfdce9.chunk.js.map": "/cursor--homework-Nadiia/HW-15-React.%20Intro/post-app/static/js/2.5ccfdce9.chunk.js.map",
+    "static/js/3.7bcb88f1.chunk.js": "/cursor--homework-Nadiia/HW-15-React.%20Intro/post-app/static/js/3.7bcb88f1.chunk.js",
+    "static/js/3.7bcb88f1.chunk.js.map": "/cursor--homework-Nadiia/HW-15-React.%20Intro/post-app/static/js/3.7bcb88f1.chunk.js.map",
+    "index.html": "/cursor--homework-Nadiia/HW-15-React.%20Intro/post-app/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/cursor--homework-Nadiia/HW-15-React.%20Intro/post-app/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.5ccfdce9.chunk.js.LICENSE.txt": "/cursor--homework-Nadiia/HW-15-React.%20Intro/post-app/static/js/2.5ccfdce9.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/cursor--homework-Nadiia/HW-15-React.%20Intro/post-app/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.db29e261.js",
+    "static/js/2.5ccfdce9.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.bcd9ae4d.chunk.js"
+  ]
+}
